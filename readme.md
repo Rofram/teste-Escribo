@@ -1,7 +1,5 @@
 # Teste Escribo
 
-
-
 ## Getting Started
 
 1. Clone the repo
