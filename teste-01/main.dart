@@ -4,6 +4,9 @@ void main() {
 }
 
 int SomarDivisiveis(int numero) {
+  if (numero < 1) {
+    return throw Exception('number is not positive');
+  }
   var numeros = [for (var i = 1; i < numero; i++) i];
   var pegarDivisiveis = (n) => n % 3 == 0 || n % 5 == 0;
   var numerosDivisiveis = numeros.where(pegarDivisiveis);
