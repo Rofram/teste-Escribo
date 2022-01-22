@@ -9,6 +9,7 @@ class AppImages {
   static const dice4 = "assets/images/dices/dice-4.png";
   static const dice5 = "assets/images/dices/dice-5.png";
   static const dice6 = "assets/images/dices/dice-6.png";
-  static const player1 = "assets/images/players/player-1.png";
-  static const player2 = "assets/images/players/player-2.png";
+  static const player1 = "assets/images/player-1.png";
+  static const player2 = "assets/images/player-2.png";
+  static const board = "assets/images/board.png";
 }

@@ -24,53 +24,78 @@ class _GamePageState extends State<GamePage> {
         alignment: Alignment.center,
         children: [
           SafeArea(
-            child: Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(
-                    top: 20,
-                    left: 16,
-                    right: 16,
-                  ),
-                  child: Row(
+            child: Padding(
+              padding: const EdgeInsets.only(
+                top: 20,
+                left: 16,
+                right: 16,
+                bottom: 20,
+              ),
+              child: Column(
+                children: [
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Expanded(
                         child: Stack(
+                          alignment: Alignment.centerLeft,
                           children: [
                             Positioned(
                               left: 20,
                               child: Container(
-                                  width: width * 0.3,
+                                  width: width * 0.35,
                                   height: 50,
                                   decoration: BoxDecoration(
-                                    color: AppColors.primary,
+                                    color: AppColors.shape,
                                     borderRadius: BorderRadius.circular(10),
                                   )),
                             ),
-                            SizedBox(
+                            Container(
                               width: 50,
                               height: 50,
-                              child: Image.asset(
-                                AppImages.player1,
-                                fit: BoxFit.cover,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(25),
+                                color: AppColors.shape,
+                                image: const DecorationImage(
+                                  image: AssetImage(AppImages.player1),
+                                ),
                               ),
                             )
                           ],
                         ),
                       ),
-                      Container(
-                        width: 50,
-                        height: 50,
-                        decoration: BoxDecoration(
-                          color: AppColors.primary,
-                          borderRadius: BorderRadius.circular(25),
+                      Expanded(
+                        child: Stack(
+                          alignment: Alignment.centerRight,
+                          children: [
+                            Positioned(
+                              right: 20,
+                              child: Container(
+                                  width: width * 0.35,
+                                  height: 50,
+                                  decoration: BoxDecoration(
+                                    color: AppColors.shape,
+                                    borderRadius: BorderRadius.circular(10),
+                                  )),
+                            ),
+                            Container(
+                              width: 50,
+                              height: 50,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(25),
+                                color: AppColors.shape,
+                                image: const DecorationImage(
+                                  image: AssetImage(AppImages.player2),
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                       )
                     ],
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           )
         ],
